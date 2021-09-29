@@ -253,6 +253,32 @@ img {
 .home__data {
   align-self: center;
 }
+.home__data h1{
+  font-size: 33px;
+  word-spacing: 0.5rem;
+}
+
+@media screen and (max-width: 920px) {
+  .home__data h1{
+    font-size: 26px;
+    word-spacing: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .home__data h1{
+    font-size: 20px;
+    word-spacing: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home__data h1{
+    font-size: 15px;
+    word-spacing: 0.5rem;
+    font-weight: bolder;
+  }
+}
 .home__title {
   font-size: var(--big-font-size);
   margin-bottom: var(--mb-5);
