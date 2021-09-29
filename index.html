@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Jalamneh Portfolio</title>
   </head>
   <body>
-    <header class="l-header">
+    <header class="l-header" id="navbar">
       <nav class="nav bd-grid">
         <div>
           <a href="#" class="nav__logo">Jalamneh</a>
@@ -34,19 +35,36 @@
         <div class="nav__toggle" id="nav-toggle">
           <i class="bx bx-menu"></i>
         </div>
+        <div class="sideMenu">
+          <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#work">Works</a>
+          </div>
+          <span onclick="openNav()"><img class="menuIcon" src="./list.png" style="width: 30px; height: 20px;"></span>
+        </div>
       </nav>
+
+
     </header>
 
     <main class="l-main">
       <!--===== HOME =====-->
-      <section class="home bd-grid" id="home">
+      <div class="homeDiv">
+      <section class="home bd-grid text" id="home">
         <div class="home__data">
           <h1 class="home__title">
-            Welcome<br />
-            <span class="home__title-color">To my Portfolio ..</span><br /><br />
-            here , you will find me & my works
+            Welcome
+            <span class="home__title-color"></span><br /><br />
+            Projects, Skills, Contact Me!
           </h1>
+          <div class="buttonsDiv">
          <a href="#footer"><button class="button">Contact Me</button></a> 
+         <a href="./Mostafa jalamneh.pdf" download="Mostafa_Jalamneh">
+          <button class="fa fa-download button" >Download CV</button></a> 
+        </div>
         </div>
 
         <div class="home__social">
@@ -63,6 +81,7 @@
           <img src="assets/img/perfil.png" alt="" />
         </div>
       </section>
+    </div>
 
       <!--===== ABOUT =====-->
       <section class="about section" id="about">
@@ -76,12 +95,11 @@
           <div>
             <h2 class="about__subtitle">I'am Mostafa</h2>
             <p class="about__text">
-              A Passionate web developer and a graduate of a programming camp in
-              Amman, I strive to continue developing my skills and keeping up
-              with what programming requires, and using them to develop and
-              improve work projects. I can quickly get along with the work team
-              and create a relationship based on cooperation, competition, and
-              respect among team members.
+              A passionate web developer and a graduate of a programming bootcamp in Amman,
+              I strive to continue developing my skills and keep up with what programming requires,
+              and use them to develop and improve business projects.
+              I can quickly get along with the work team and collaborate with them to create a creative work environment
+              to reach high quality projects.
             </p>
           </div>
         </div>
@@ -103,18 +121,18 @@
             </p>
             <div class="skills__data">
               <div class="skills__names">
-                <span class="skills__name">HTML5 &nbsp CSS3 &nbsp JavaScript</span>
+                <span class="skills__name">HTML5 &nbsp CSS3 &nbsp JavaScript &nbsp TypeScript</span>
               </div>
             </div>
             <div class="skills__data">
               <div class="skills__names">
-                <span class="skills__name">React.js  &nbsp React Hooks &nbsp Redux</span>
+                <span class="skills__name">React.js  &nbsp React Hooks &nbsp Redux &nbsp DOM &nbsp jQuery</span>
               </div>
              
-            </div>
+            </div> 
             <div class="skills__data">
               <div class="skills__names">
-                <span class="skills__name">Node.js &nbsp Express.js &nbsp jQuery &nbsp API</span>
+                <span class="skills__name">Node.js &nbsp PHP &nbsp Express.js &nbsp API</span>
               </div>
             </div>
 
@@ -129,17 +147,17 @@
 
 
       <section class="work section" id="work">
-        <h2 class="section-title">Work</h2>
+        <h2 class="section-title">Works</h2>
 
         <div class="work__container bd-grid">
           <div class="work__img">
-           <a href="https://github.com/MostafaJalamneh/MERAKI_Academy_Project_5" target="_blank"> <img src="communication.jpg" alt="" /></a>
+           <a href="https://www.youtube.com/watch?v=jtSPeUSpB7I" target="_blank"> <img class="imgHeight" src="communication.jpg" alt="" /></a>
           </div>
           <div class="work__img">
-            <a href="https://github.com/synergy-project-4/MERAKI_Academy_Project_4" target="_blank"><img src="ecommerce-1706103_1920.png" alt="" /></a>
+            <a href="https://github.com/synergy-project-4/MERAKI_Academy_Project_4" target="_blank"><img class="imgHeight" src="ecommerce-1706103_1920.png" alt="" /></a>
           </div>
           <div class="work__img">
-            <a href="https://grap-one7.herokuapp.com/" target="_blank"><img src="grap.png" alt="" /></a>
+            <a href="https://grap-one7.herokuapp.com/" target="_blank"><img class="imgHeight" src="grap.png" alt="" /></a>
           </div>
       </section>
 
@@ -148,11 +166,13 @@
     <section  id="footer">
         <footer class="footer">
         <p>Contact Me : </p>
-        <a href="https://www.linkedin.com/in/mostafa-aljalamneh/" target="_blank"><img class="contactIcon" src="linkedin.png"/></a>
-        <a href="https://www.facebook.com/mostafa17jalamneh" target="_blank"><img class="contactIcon" src="facebook-circular-logo.png"/></a>
-        <a href="mailto:mostafa.jalamneh17@gmail.com?subject=subject...&body=anything...&" target="_blank"><img class="contactIcon" src="email.png"/></a>
-        <a href="https://github.com/MostafaJalamneh" target="_blank"><img class="contactIcon" src="github-logo-silhouette-in-a-square.png"/></a>
-    </footer>
+        <div class="iconsDiv">
+        <a href="https://www.linkedin.com/in/mostafa-aljalamneh/" target="_blank"><img  src="linkedin.png"/></a>
+        <a href="https://www.facebook.com/mostafa17jalamneh" target="_blank"><img  src="facebook-circular-logo.png"/></a>
+        <a href="mailto:mostafa.jalamneh17@gmail.com?subject=subject...&body=anything...&" target="_blank"><img  src="email.png"/></a>
+        <a href="https://github.com/MostafaJalamneh" target="_blank"><img  src="github-logo-silhouette-in-a-square.png"/></a>
+        </div>
+      </footer>
     </section>
       
     <script src="main.js"></script>
