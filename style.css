@@ -272,11 +272,14 @@ img {
     font-size: 20px;
     word-spacing: 0.5rem;
   }
-  .homeDiv{
+  .home__data{
     padding-top: 25%;
   }
 }
 
+.welcome{
+  border-bottom:2px solid rgba(69, 173, 214, 0.356) ;
+}
 
 .home__title {
   font-size: var(--big-font-size);
